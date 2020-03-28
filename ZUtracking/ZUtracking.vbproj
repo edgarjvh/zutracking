@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BDEDFFCC-1750-414F-BCAA-5E4C86381AB7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ZUtracking.My.MyApplication</StartupObject>
+    <RootNamespace>ZUtracking</RootNamespace>
+    <AssemblyName>ZUtracking</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>D:\ZUtracking ClickOnce\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\ZUTRACKING-1\updates\zutracking\</InstallUrl>
+    <UpdateUrl>\\ZUTRACKING-1\updates\zutracking\</UpdateUrl>
+    <SupportUrl>http://www.zuprevencion.com.ve</SupportUrl>
+    <ProductName>ZUtracking</ProductName>
+    <PublisherName>Edgar Villasmil</PublisherName>
+    <SuiteName>ZUtracking</SuiteName>
+    <WebPage>index.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>4.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ZUtracking.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ZUtracking.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8750AF70F986F6BFA6BDF50062C299C89FB800BB</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ZUtracking_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>ZUtracking.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>ZUtracking.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GMap.NET.Core">
+      <HintPath>..\ZUControls\bin\Debug\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms">
+      <HintPath>..\ZUControls\bin\Debug\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="MailKit, Version=1.18.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailKit.1.18.1.1\lib\net451\MailKit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MimeKit, Version=1.18.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.1.18.1\lib\net451\MimeKit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\Connector NET 6.8.3\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="data\DrawingControl.vb" />
+    <Compile Include="data\Encryptation.vb" />
+    <Compile Include="data\GmapMarkerEvent.vb" />
+    <Compile Include="data\GmapMarkerTravel.vb" />
+    <Compile Include="data\GmapMarkerMain.vb" />
+    <Compile Include="data\Marker.vb" />
+    <Compile Include="data\PduDecoder.vb" />
+    <Compile Include="data\Procedure.vb" />
+    <Compile Include="data\TreeNodeTravel.vb" />
+    <Compile Include="forms\frmClients.Designer.vb">
+      <DependentUpon>frmClients.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmClients.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmDataBase.Designer.vb">
+      <DependentUpon>frmDataBase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmDataBase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmDealers.Designer.vb">
+      <DependentUpon>frmDealers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmDealers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmDeviceConfig.Designer.vb">
+      <DependentUpon>frmDeviceConfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmDeviceConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmDevices.Designer.vb">
+      <DependentUpon>frmDevices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmDevices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmEventHistory.Designer.vb">
+      <DependentUpon>frmEventHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmEventHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmGeofences.Designer.vb">
+      <DependentUpon>frmGeofences.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmGeofences.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmMain.Designer.vb">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmModemSms.Designer.vb">
+      <DependentUpon>frmModemSms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmModemSms.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmNoReporting.Designer.vb">
+      <DependentUpon>frmNoReporting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmNoReporting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmReports.Designer.vb">
+      <DependentUpon>frmReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmSimCards.Designer.vb">
+      <DependentUpon>frmSimCards.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmSimCards.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmSwitchUser.Designer.vb">
+      <DependentUpon>frmSwitchUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmSwitchUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmTravelHistory.Designer.vb">
+      <DependentUpon>frmTravelHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmTravelHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmUsers.Designer.vb">
+      <DependentUpon>frmUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="models\Client.vb" />
+    <Compile Include="models\ClientMisc.vb" />
+    <Compile Include="models\ConsoleVehicle.vb" />
+    <Compile Include="models\Contact.vb" />
+    <Compile Include="models\CurrentLocation.vb" />
+    <Compile Include="models\Dealer.vb" />
+    <Compile Include="models\Device.vb" />
+    <Compile Include="models\DeviceEvent.vb" />
+    <Compile Include="models\DeviceModel.vb" />
+    <Compile Include="models\Geofence.vb" />
+    <Compile Include="models\GeofencePoint.vb" />
+    <Compile Include="models\GeofenceVehicle.vb" />
+    <Compile Include="models\PhoneNumber.vb" />
+    <Compile Include="models\Report.vb" />
+    <Compile Include="models\ReportType.vb" />
+    <Compile Include="models\Response.vb" />
+    <Compile Include="models\SimCard.vb" />
+    <Compile Include="models\Trace.vb" />
+    <Compile Include="models\User.vb" />
+    <Compile Include="models\Vehicle.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="forms\frmClients.resx">
+      <DependentUpon>frmClients.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmDataBase.resx">
+      <DependentUpon>frmDataBase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmDealers.resx">
+      <DependentUpon>frmDealers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmDeviceConfig.resx">
+      <DependentUpon>frmDeviceConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmDevices.resx">
+      <DependentUpon>frmDevices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmEventHistory.resx">
+      <DependentUpon>frmEventHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmGeofences.resx">
+      <DependentUpon>frmGeofences.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmMain.resx">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmModemSms.resx">
+      <DependentUpon>frmModemSms.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmNoReporting.en-US.resx">
+      <DependentUpon>frmNoReporting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmNoReporting.resx">
+      <DependentUpon>frmNoReporting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmReports.resx">
+      <DependentUpon>frmReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmSimCards.resx">
+      <DependentUpon>frmSimCards.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmSwitchUser.resx">
+      <DependentUpon>frmSwitchUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmTravelHistory.resx">
+      <DependentUpon>frmTravelHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmUsers.resx">
+      <DependentUpon>frmUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ZUtracking_ClaveTemporal.pfx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\label_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZUControls\ZUControls.csproj">
+      <Project>{89145B74-4200-4DB8-A4D0-6088BE97F2F3}</Project>
+      <Name>ZUControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\system_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\refresh_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\refresh_icon_smaller.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\costumer_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\simcard_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\gps_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\dealer_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\change_user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\lock_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\logo_mod_mon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\travel_history_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\event_history_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\geofence_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\reports_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\database_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\modem_sms_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\voice_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\auto_center_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\show_map_center_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\map_control_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\clients_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\vehicles_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="LTTS7Lib">
+      <Guid>{5A80A7F3-4AC0-44B4-B684-1F18ADC68C4D}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\clients_icon_clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\user_icon_clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\see_pass_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\settings_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\collapse_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\uncollapse_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\move_error_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\move_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\stop_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\images\marker_icon_default.png" />
+    <None Include="files\images\move_selected_icon.png" />
+    <None Include="files\images\stop_selected_icon.png" />
+    <None Include="files\images\show_alerts_layer_icon.png" />
+    <None Include="files\images\no_reporting_icon.png" />
+    <None Include="files\images\logo 2.png" />
+    <None Include="files\images\logo 3.png" />
+    <None Include="files\images\car_moving_icon.png" />
+    <Content Include="bin\Debug\files\mail\mail_template.html" />
+    <Content Include="bin\Debug\mail_template.html" />
+    <None Include="files\images\portada.png" />
+    <None Include="files\images\main_server_icon.png" />
+    <Content Include="mail_template.html" />
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="files\mail\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="bin\Debug\files\mail\mail_template.html">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="bin\Debug\mail_template.html">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

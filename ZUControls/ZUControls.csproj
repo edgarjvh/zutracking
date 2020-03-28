@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89145B74-4200-4DB8-A4D0-6088BE97F2F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZUControls</RootNamespace>
+    <AssemblyName>ZUControls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GMap.NET.Core, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Unofficial.Microsoft.mshtml.7.0.3300\lib\net40\Microsoft.mshtml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LinkDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LinkDialog.Designer.cs">
+      <DependentUpon>LinkDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl\NativeMethods.cs" />
+    <Compile Include="TabControl\TabStyle.cs" />
+    <Compile Include="TabControl\TabStyleProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TabStyleProviders\TabStyleAngledProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TabStyleProviders\TabStyleChromeProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TabStyleProviders\TabStyleDefaultProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TabStyleProviders\TabStyleIE8Provider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TabStyleProviders\TabStyleNoneProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TabStyleProviders\TabStyleRoundedProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TabStyleProviders\TabStyleVisualStudioProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TabStyleProviders\TabStyleVS2010Provider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TabControl\ThemedColors.cs" />
+    <Compile Include="ToolStripRadioButtonMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TrackBar\ColorHelper.cs" />
+    <Compile Include="TrackBar\DrawMACStyleHelper.cs" />
+    <Compile Include="TrackBar\ZUTrackBarDesigner.cs" />
+    <Compile Include="ZUButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZUComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZUCustomizableButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZUDataGridView2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZUDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZUMapa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZUDatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZUMonthPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZUNumericBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZUPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZUTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZUTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZUTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HiddenCheckBoxTreeNode.cs" />
+    <Compile Include="ZUTreeNode.cs" />
+    <Compile Include="ZUTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LinkDialog.resx">
+      <DependentUpon>LinkDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\backgroundButtonClicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundButtonDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundButtonHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundButtonNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundButtonClicked1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundButtonHover1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundButtonNormal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundButtonClicked2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundButtonClicked3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundButtonClicked4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundButtonHover2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundButtonHover3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundButtonHover4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundButtonNormal2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundButtonNormal3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundButtonNormal4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundHeader1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundHeader2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundHeader3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundHeader4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundHeader5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundHeader6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundHeader7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundHeader8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\align_center_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\align_justify_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\align_left_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\align_right_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attachment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bold_b_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullets_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\decrease_indent_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font_color_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\increase_indent_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insert_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italic_b_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\numbering_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\underline_b_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\highlight-text.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
